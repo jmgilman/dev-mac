@@ -1,9 +1,11 @@
 { config, pkgs, machnix, ... }:
 let
+    chezmoi = pkgs.callPackage ./packages/chezmoi.nix {};
     gopass = pkgs.callPackage ./packages/gopass.nix {};
 in {
     # User-specific packages
     home.packages = [
+        chezmoi
         gopass
         pkgs.asciinema
         pkgs.ansible
@@ -12,7 +14,6 @@ in {
         pkgs.awscli2
         pkgs.bitwarden-cli
         pkgs.certbot-full
-        pkgs.chezmoi
         pkgs.consul
         pkgs.diff-so-fancy
         pkgs.dive
