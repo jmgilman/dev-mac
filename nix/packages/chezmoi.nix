@@ -8,10 +8,10 @@ buildGoModule rec {
     owner = "twpayne";
     repo = "chezmoi";
     rev = "v${version}";
-    sha256 = "sha256-RX9Hgjl/i/FWXHFp+yYWQEYDiOQijU+eiBnREu4K1Mg=";
+    sha256 = "sha256-j34IIsgL7Ra5Tez7QzwXJR82RKOhX/JuYHBQkeVWLSI=";
   };
 
-  vendorSha256 = "sha256-tz3Vcw/p7BKcgc3EsLsSPOKhwqN5kysOcmER7OoKQ+w=";
+  vendorSha256 = "sha256-ShHdSg/q7SYffkn8hNdL5KblKjJ0ONkDMqU+dJzroNU=";
 
   doCheck = false;
 
