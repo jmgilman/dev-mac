@@ -27,6 +27,7 @@ in {
         pkgs.oh-my-zsh
         pkgs.packer
         pkgs.php
+        pkgs.pinentry_mac
         pkgs.poetry
         pkgs.postgresql
         pkgs.pre-commit
