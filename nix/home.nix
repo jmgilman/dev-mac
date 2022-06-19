@@ -21,7 +21,6 @@ in {
         pkgs.google-cloud-sdk
         pkgs.jdk11
         pkgs.lastpass-cli
-        pkgs.magic-wormhole
         pkgs.maven
         pkgs.navi
         pkgs.nixos-generators
