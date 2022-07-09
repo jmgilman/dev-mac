@@ -23,6 +23,7 @@ in {
         pkgs.lastpass-cli
         pkgs.maven
         pkgs.navi
+        pkgs.nixpkgs-fmt
         pkgs.nixos-generators
         pkgs.oh-my-zsh
         pkgs.packer
