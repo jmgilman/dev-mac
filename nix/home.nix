@@ -132,7 +132,8 @@ in
         --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
         --output text \
         --serial-number arn:aws:iam::956031636071:mfa/jmgilman \
-        --token-code $(ykman oath accounts code -s)
+        --token-code $(ykman oath accounts code -s) \
+        --duration-seconds 3600
         ))
       }
     '';
