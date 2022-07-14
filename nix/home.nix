@@ -14,6 +14,7 @@ in
     pkgs.autojump
     pkgs.awscli2
     pkgs.bitwarden-cli
+    pkgs.cachix
     pkgs.certbot-full
     pkgs.consul
     pkgs.diff-so-fancy
