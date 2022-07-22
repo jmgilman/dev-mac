@@ -26,6 +26,7 @@ in
     pkgs.maven
     pkgs.navi
     pkgs.nixpkgs-fmt
+    pkgs.nixops
     pkgs.nixos-generators
     pkgs.oh-my-zsh
     pkgs.packer
