@@ -126,17 +126,16 @@ in
       # Load exports
       source $HOME/.exports
 
-      aws_assume () {
-        export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
-        $(aws sts assume-role \
-        --role-arn arn:aws:iam::956031636071:role/$1 \
-        --role-session-name $1 \
-        --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
-        --output text \
-        --serial-number arn:aws:iam::956031636071:mfa/jmgilman \
-        --token-code $(ykman oath accounts code -s) \
-        --duration-seconds 3600
-        ))
+      function aws-switch() {
+        case ''${1} in
+            "")
+            clear)
+                export AWS_PROFILE=""
+                ;;
+            *)
+                export AWS_PROFILE="''${1}"
+                ;;
+        esac
       }
     '';
 
