@@ -3,44 +3,46 @@
 # All system packages
 let
 
-yubikey-manager = pkgs.yubikey-manager.overrideAttrs (_: {
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace 'cryptography = "^2.1 || ^3.0"' 'cryptography = "*"'
-  '';
-});
+  yubikey-manager = pkgs.yubikey-manager.overrideAttrs (_: {
+    postPatch = ''
+      substituteInPlace pyproject.toml \
+        --replace 'cryptography = "^2.1 || ^3.0"' 'cryptography = "*"'
+    '';
+  });
 
-syspkgs = [
-  pkgs.bat
-  pkgs.bat-extras.batman
-  pkgs.bat-extras.batgrep
-  pkgs.bat-extras.batdiff
-  pkgs.bat-extras.batwatch
-  pkgs.bat-extras.prettybat
-  pkgs.curl
-  pkgs.direnv
-  pkgs.fd
-  pkgs.fzf
-  pkgs.git
-  pkgs.gnupg
-  pkgs.gnutls
-  pkgs.go
-  pkgs.jq
-  pkgs.nano
-  pkgs.nodejs
-  pkgs.openssh
-  pkgs.pcsclite
-  pkgs.pinentry_mac
-  pkgs.procps
-  pkgs.python310
-  pkgs.ripgrep
-  pkgs.vim
-  pkgs.wget
-  yubikey-manager
-  pkgs.zsh
-];
+  syspkgs = [
+    pkgs.bat
+    pkgs.bat-extras.batman
+    pkgs.bat-extras.batgrep
+    pkgs.bat-extras.batdiff
+    pkgs.bat-extras.batwatch
+    pkgs.bat-extras.prettybat
+    pkgs.curl
+    pkgs.direnv
+    pkgs.fd
+    pkgs.fzf
+    pkgs.git
+    pkgs.gnupg
+    pkgs.gnutls
+    pkgs.go
+    pkgs.jq
+    pkgs.nano
+    pkgs.nodejs
+    pkgs.openssh
+    pkgs.pcsclite
+    pkgs.pinentry_mac
+    pkgs.procps
+    pkgs.python310
+    pkgs.ripgrep
+    pkgs.vim
+    pkgs.wget
+    pkgs.yq
+    yubikey-manager
+    pkgs.zsh
+  ];
 
-in {
+in
+{
   # Default system configurations
   system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
   system.defaults.NSGlobalDomain.InitialKeyRepeat = 10;
