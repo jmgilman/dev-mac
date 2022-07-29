@@ -36,7 +36,8 @@ let
     pkgs.ripgrep
     pkgs.vim
     pkgs.wget
-    pkgs.yq
+    pkgs.yj
+    pkgs.yq-go
     yubikey-manager
     pkgs.zsh
   ];
