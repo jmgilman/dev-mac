@@ -16,6 +16,7 @@ in
     pkgs.bitwarden-cli
     pkgs.cachix
     pkgs.certbot-full
+    pkgs.conda
     pkgs.consul
     pkgs.diff-so-fancy
     pkgs.dive
