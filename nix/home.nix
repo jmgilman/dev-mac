@@ -5,6 +5,7 @@ let
 in
 {
   # User-specific packages
+  home.stateVersion = "22.05";
   home.packages = [
     chezmoi
     gopass
