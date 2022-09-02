@@ -125,6 +125,9 @@ in
       # Load exports
       source $HOME/.exports
 
+      # Setup anaconda
+      export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+
       function aws-switch() {
         case ''${1} in
             "")
