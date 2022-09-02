@@ -26,10 +26,10 @@ let
     pkgs.procps
     pkgs.python310
     pkgs.python310Packages.pipx
+    pkgs.python310Packages.virtualenv
     pkgs.ripgrep
     pkgs.swig
     pkgs.vim
-    pkgs.virtualenv
     pkgs.wget
     pkgs.yj
     pkgs.yq-go
