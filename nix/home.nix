@@ -15,8 +15,6 @@ in
     pkgs.awscli2
     pkgs.bitwarden-cli
     pkgs.cachix
-    pkgs.certbot-full
-    pkgs.conda
     pkgs.consul
     pkgs.diff-so-fancy
     pkgs.dive
@@ -27,7 +25,6 @@ in
     pkgs.maven
     pkgs.navi
     pkgs.nixpkgs-fmt
-    pkgs.nixops
     pkgs.nixos-generators
     pkgs.oh-my-zsh
     pkgs.packer

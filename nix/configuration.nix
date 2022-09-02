@@ -2,14 +2,6 @@
 
 # All system packages
 let
-
-  yubikey-manager = pkgs.yubikey-manager.overrideAttrs (_: {
-    postPatch = ''
-      substituteInPlace pyproject.toml \
-        --replace 'cryptography = "^2.1 || ^3.0"' 'cryptography = "*"'
-    '';
-  });
-
   syspkgs = [
     pkgs.bat
     pkgs.bat-extras.batman
@@ -33,12 +25,13 @@ let
     pkgs.pinentry_mac
     pkgs.procps
     pkgs.python310
+    pkgs.python310Packages.pipx
     pkgs.ripgrep
+    pkgs.swig
     pkgs.vim
     pkgs.wget
     pkgs.yj
     pkgs.yq-go
-    yubikey-manager
     pkgs.zsh
   ];
 
