@@ -2,6 +2,14 @@
 
 # All system packages
 let
+  gnupg = pkgs.gnupg.overrideAttrs (oldAttrs: rec {
+    pname = "gnupg";
+    version = "2.3.6";
+    src = pkgs.fetchurl {
+      url = "mirror://gnupg/gnupg/${pname}-${version}.tar.bz2";
+      sha256 = "sha256-Iff+L8XC8hQYSrBQl37HqOME5Yv64qsJj+xp+Pq9qcE=";
+    };
+  });
   syspkgs = [
     pkgs.bat
     pkgs.bat-extras.batman
@@ -14,7 +22,7 @@ let
     pkgs.fd
     pkgs.fzf
     pkgs.git
-    pkgs.gnupg
+    gnupg
     pkgs.gnutls
     pkgs.go
     pkgs.jq
