@@ -23,6 +23,7 @@ in
     pkgs.google-cloud-sdk
     pkgs.jdk11
     pkgs.lastpass-cli
+    pkgs.lima
     pkgs.maven
     pkgs.navi
     pkgs.nixpkgs-fmt
