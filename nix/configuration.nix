@@ -24,6 +24,7 @@ let
     pkgs.git
     gnupg
     pkgs.gnutls
+    pkgs.gpgme
     pkgs.go
     pkgs.jq
     pkgs.nano
