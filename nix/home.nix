@@ -100,6 +100,7 @@ in
       czr = "chezmoi apply ~/.config/darwin darwin-update && exec $SHELL";
       gbc = "git checkut -b ";
       gpb = ''git push origin "$(git rev-parse --abbrev-ref HEAD)"'';
+      k = "kubectl";
       left = "ls -t -1";
       ll = "ls -la";
       lt = "du -sh * | sort -h";
