@@ -22,6 +22,7 @@ in
     pkgs.gh
     pkgs.google-cloud-sdk
     pkgs.jdk11
+    pkgs.kind
     pkgs.lastpass-cli
     pkgs.lima
     pkgs.maven
